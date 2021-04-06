@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [   <!ENTITY vocab "http://www.unice.fr/voc">     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#"> ]>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:voc="&vocab;#" xml:base="http://www.unice.fr/data">
+	<voc:Woman rdf:about="#Jen">
+    	<voc:name>Jen</voc:name>
+    	<voc:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42 </voc:age>
+    	<voc:shoeSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36 </voc:shoeSize>
+    	<voc:trouserSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38 </voc:trouserSize>
+    	<voc:hasFather rdf:resource="#Thomas"></voc:hasFather>
+    	<voc:hasColleague rdf:resource="#Catherine"></voc:hasColleague>
+    	<voc:hasColleague rdf:resource="#Fabien"></voc:hasColleague>
+    	<voc:hasSpouse rdf:resource="#Seb"></voc:hasSpouse>
+    	<voc:hasChild rdf:resource="#Steffen"></voc:hasChild>
+    	<voc:hasChild>
+    		<rdf:Description rdf:about="#Anny">
+    			<voc:name>Anny</voc:name>
+    			<rdf:type rdf:resource="&vocab;#Woman"></rdf:type>
+      		</rdf:Description>
+      	</voc:hasChild>
+      	<rdf:type rdf:resource="&vocab;#Engineer"></rdf:type>
+ 	</voc:Woman>
+	<voc:Man rdf:about="#Seb">
+    	<voc:name>Seb</voc:name>
+    	<voc:hasChild rdf:resource="#Steffen"></voc:hasChild>
+    	<voc:hasChild rdf:resource="#Anny"></voc:hasChild>
+  	</voc:Man>
+  	<voc:Man rdf:about="#Thomas">
+    	<voc:name>Thomas</voc:name>
+    	<voc:hasChild rdf:resource="#Jen"></voc:hasChild>
+  	</voc:Man>
+  	<voc:Man rdf:about="#Steffen">
+    	<voc:name>Steffen</voc:name>
+  	</voc:Man>
+</rdf:RDF>

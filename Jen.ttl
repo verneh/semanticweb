@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix voc: <http://www.unice.fr/voc#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<http://www.unice.fr/data#Jen> a voc:Engineer , voc:Woman;
+    voc:age "42"^^xsd:string ;
+    voc:shoeSize "36"^^xsd:string ;
+    voc:trouserSize "38"^^xsd:string ;
+    voc:hasChild <http://www.unice.fr/data#Anny>, <http://www.unice.fr/data#Steffen>;
+    voc:hasSpouse <http://www.unice.fr/data#Seb> ;
+   	voc:hasColleague <http://www.unice.fr/data#Catherine> ;
+   	voc:hasColleague <http://www.unice.fr/data#Fabien> ;
+   	voc:hasFather <http://www.unice.fr/data#Thomas> ;
+    voc:name "Jen" .
+<http://www.unice.fr/data#Seb> a voc:Man ;
+    voc:hasChild <http://www.unice.fr/data#Anny>,
+        <http://www.unice.fr/data#Steffen> ;
+    voc:name "Seb" .
+<http://www.unice.fr/data#Thomas> a voc:Man ;
+    voc:hasChild <http://www.unice.fr/data#Jen>,
+        <http://www.unice.fr/data#Jen> ;
+    voc:name "Thomas" .
+<http://www.unice.fr/data#Anny> a voc:Woman ;
+    voc:name "Anny" .
+<http://www.unice.fr/data#Steffen> a voc:Man ;
+     voc:name "Steffen" .
+
+
